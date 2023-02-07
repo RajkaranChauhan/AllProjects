@@ -1,0 +1,37 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import io.opentelemetry.exporter.logging.SystemOutLogExporter;
+
+public class NestedFrames {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		LaunchBrowser lb =new LaunchBrowser();
+		lb.browserLaunch();
+		lb.driver.manage().window().maximize();
+		lb.driver.get("https://the-internet.herokuapp.com/nested_frames");
+		
+	System.out.println(lb.driver.findElements(By.tagName("frame")).size());		
+	
+	// xpath of top frame //frame[@name='frame-top']
+	
+	lb.driver.switchTo().frame(lb.driver.findElement( By.xpath("//frame[@name='frame-top']")));
+	
+	System.out.println(lb.driver.findElements(By.tagName("frame")).size());	
+///  middle frame xpath     //frame[@name='frame-middle']
+	
+	lb.driver.switchTo().frame(lb.driver.findElement(By.xpath("//frame[@name='frame-middle']")));
+	
+	System.out.println(lb.driver.findElement(By.xpath("//div[@id=\"content\"]")).getText());	
+	
+	
+	lb.driver.switchTo().defaultContent();	
+	System.out.println(lb.driver.findElements(By.tagName("frame")).size());	
+	
+	
+	}
+	
+
+}

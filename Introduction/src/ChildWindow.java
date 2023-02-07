@@ -1,0 +1,31 @@
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+
+public class ChildWindow {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		LaunchBrowser lb =new LaunchBrowser();
+		lb.browserLaunch();
+		lb.driver.manage().window().maximize();
+		lb.driver.get("https://www.businessinsider.in/thelife/how-to-split-the-screen-on-a-windows-10-computer-for-all-of-your-multitasking-needs/articleshow/70370880.cms");
+		
+		lb.driver.findElement(By.xpath("//a[@class=\"fbContBg shareContNewCmn\"] [1]")).click();
+		
+	
+		Set<String> win=lb.driver.getWindowHandles();
+		Iterator<String> it =win.iterator();
+		String parent = it.next();
+		String child = it.next();
+		
+		lb.driver.switchTo().window(child);
+		String test=lb.driver.findElement(By.xpath("//div[text()=\"Log in to your Facebook account to share.\"]")).getText();
+	
+		System.out.println(test);
+	
+	}
+
+}

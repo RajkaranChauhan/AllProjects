@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-06T18:49:01 IST" name="Suite" finished-at="2022-07-06T18:49:37 IST" duration-ms="36590">
+    <groups>
+    </groups>
+    <test started-at="2022-07-06T18:49:01 IST" name="Homepage" finished-at="2022-07-06T18:49:29 IST" duration-ms="28405">
+      <class name="DriverCall.Homepage">
+        <test-method is-config="true" signature="setDriver()[pri:0, instance:DriverCall.Homepage@783a467b]" started-at="2022-07-06T18:49:01 IST" name="setDriver" finished-at="2022-07-06T18:49:08 IST" duration-ms="6668" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method signature="homepage()[pri:0, instance:DriverCall.Homepage@783a467b]" started-at="2022-07-06T18:49:08 IST" name="homepage" finished-at="2022-07-06T18:49:29 IST" duration-ms="21522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homepage -->
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:DriverCall.Homepage@783a467b]" started-at="2022-07-06T18:49:29 IST" name="browserClose" finished-at="2022-07-06T18:49:29 IST" duration-ms="121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClose -->
+      </class> <!-- DriverCall.Homepage -->
+    </test> <!-- Homepage -->
+    <test started-at="2022-07-06T18:49:01 IST" name="Loginpage" finished-at="2022-07-06T18:49:37 IST" duration-ms="36590">
+      <class name="DriverCall.Loginpage">
+        <test-method is-config="true" signature="setDriver()[pri:0, instance:DriverCall.Loginpage@73e22a3d]" started-at="2022-07-06T18:49:01 IST" name="setDriver" finished-at="2022-07-06T18:49:08 IST" duration-ms="6759" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method signature="callingLoginPage()[pri:0, instance:DriverCall.Loginpage@73e22a3d]" started-at="2022-07-06T18:49:08 IST" name="callingLoginPage" finished-at="2022-07-06T18:49:37 IST" duration-ms="29619" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- callingLoginPage -->
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:DriverCall.Loginpage@73e22a3d]" started-at="2022-07-06T18:49:37 IST" name="browserClose" finished-at="2022-07-06T18:49:37 IST" duration-ms="126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClose -->
+      </class> <!-- DriverCall.Loginpage -->
+    </test> <!-- Loginpage -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MyTestRunner (1)" project="PracticeAutomationTestingDotIn" tests="15" started="15" failures="1" errors="1" ignored="0">
+  <testsuite name="testRunner.MyTestRunner" time="227.234">
+    <testsuite name="Verify user is able to browse to the give URL and is on the index page. After verifying the content of the index page user is able to navigate to the My Account page." time="33.524">
+      <testcase name="User is on the index page and page title is verified" classname="Verify user is able to browse to the give URL and is on the index page. After verifying the content of the index page user is able to navigate to the My Account page." time="12.395"/>
+      <testcase name="User is on the index page and logo is verified" classname="Verify user is able to browse to the give URL and is on the index page. After verifying the content of the index page user is able to navigate to the My Account page." time="9.644"/>
+      <testcase name="User navigates to the MyAccount Page" classname="Verify user is able to browse to the give URL and is on the index page. After verifying the content of the index page user is able to navigate to the My Account page." time="11.485"/>
+    </testsuite>
+    <testsuite name="once the user is in the Myaccount page the user can login using the correct credentials and the user will be moved to home page" time="36.046">
+      <testcase name="Verify the title of the page" classname="once the user is in the Myaccount page the user can login using the correct credentials and the user will be moved to home page" time="11.218"/>
+      <testcase name="Forgot Password link" classname="once the user is in the Myaccount page the user can login using the correct credentials and the user will be moved to home page" time="10.883"/>
+      <testcase name="Login with correct credentials" classname="once the user is in the Myaccount page the user can login using the correct credentials and the user will be moved to home page" time="13.945"/>
+    </testsuite>
+    <testsuite name="verify in Home page the content. The tabs in left hand side to be verified. After that user will be moved to the Shop page." time="39.417">
+      <testcase name="Verify the title of the page" classname="verify in Home page the content. The tabs in left hand side to be verified. After that user will be moved to the Shop page." time="13.175"/>
+      <testcase name="Home Page section count" classname="verify in Home page the content. The tabs in left hand side to be verified. After that user will be moved to the Shop page." time="12.769"/>
+      <testcase name="User navigates to the Shop page" classname="verify in Home page the content. The tabs in left hand side to be verified. After that user will be moved to the Shop page." time="13.473"/>
+    </testsuite>
+    <testsuite name="Verify from the Shop page user is able to add a book to the basket and navigate to the basket page" time="40.349">
+      <testcase name="Verify the title of the page" classname="Verify from the Shop page user is able to add a book to the basket and navigate to the basket page" time="16.188"/>
+      <testcase name="Search the required book and add the book to basket" classname="Verify from the Shop page user is able to add a book to the basket and navigate to the basket page" time="24.16"/>
+    </testsuite>
+    <testsuite name="Verify in the Basket page the user sees the books and there quantity added. Here user will remove one of the book and update the basket. The usre will Proceed to checkout." time="33.864">
+      <testcase name="Verify the title of the page" classname="Verify in the Basket page the user sees the books and there quantity added. Here user will remove one of the book and update the basket. The usre will Proceed to checkout." time="16.406"/>
+      <testcase name="User removed one book from the Basket page and update the Basket page and then navigates to the checkout." classname="Verify in the Basket page the user sees the books and there quantity added. Here user will remove one of the book and update the basket. The usre will Proceed to checkout." time="17.458">
+        <error>io.cucumber.junit.UndefinedStepException: The step 'verify there is one Products in the basket  #two' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("verify there is one Products in the basket  #two")
+public void verify_there_is_one_products_in_the_basket_two(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List&lt;E&gt;, List&lt;List&lt;E&gt;&gt;, List&lt;Map&lt;K,V&gt;&gt;, Map&lt;K,V&gt; or
+    // Map&lt;K, List&lt;V&gt;&gt;. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="verify in Checkout page the user provides bellings details via excelfile and verifies the order details and makes the payment to place order." time="44.014">
+      <testcase name="verify your order details" classname="verify in Checkout page the user provides bellings details via excelfile and verifies the order details and makes the payment to place order." time="17.3">
+        <failure>java.lang.AssertionError&#13;
+	at org.junit.Assert.fail(Assert.java:86)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:41)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:52)&#13;
+	at stepDefinations.CheckoutPageSteps.verify_the_order_details(CheckoutPageSteps.java:133)&#13;
+	at ✽.Verify the order details.(file:///D:/Dev/Selenium/PracticeAutomationTestingDotIn/src/test/resources/appFeatures/FFF_Checkout.feature:14)&#13;
+&#13;
+</failure>
+      </testcase>
+      <testcase name="Update the Billing details" classname="verify in Checkout page the user provides bellings details via excelfile and verifies the order details and makes the payment to place order." time="26.713"/>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,32 @@
+package End2End;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+public class DataProperties {
+	public String browsers;
+	public WebDriver driver;
+	
+	@Test
+	public  void dataPropertyFile() throws IOException
+	{
+	
+	Properties prop =new Properties();
+	String path=System.getProperty("user.dir")+"\\src\\main\\java\\End2End\\data.properties";
+	FileInputStream fis=new FileInputStream(path);
+	
+	prop.load(fis);
+		
+	 browsers=prop.getProperty("browser");
+	//return browser;
+	DriverDefine dr=new DriverDefine(browsers);
+	System.out.println(browsers);
+	
+	 driver=dr.getDriver();
+	}
+}

@@ -1,0 +1,71 @@
+import org.openqa.selenium.By;
+
+public class Spicejet {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+LaunchBrowser lb=new LaunchBrowser();
+		
+		lb.browserLaunch();
+		lb.driver.manage().window().maximize();
+	
+		lb.driver.get("https://www.spicejet.com/");
+		
+/*
+		lb.driver.findElement(By.xpath("(//div[@class='css-76zvg2 r-homxoj r-ubezar r-1ozqkpa'])[2]")).click();  /////round trip
+		Thread.sleep(2000);
+
+		lb.driver.findElement(By.xpath("//*[contains(text(),'From')]")).click();
+		Thread.sleep(2000);
+		lb.driver.findElement(By.xpath("//*[contains(text(),'Guwahati')]")).click();
+		Thread.sleep(7000);
+		lb.driver.findElement(By.xpath("//*[contains(text(),'Pune')]")).click();
+		Thread.sleep(2000);
+		System.out.println("before");
+		lb.driver.findElement(By.xpath("//div[@class='css-1dbjc4n r-1awozwy r-19m6qjp r-156aje7 r-y47klf r-1phboty r-1d6rzhh r-1pi2tsx r-1777fci r-13qz1uu']")).click();   ////focused date
+				System.out.println("after");
+				
+				System.out.println("before1");
+				lb.driver.findElement(By.xpath("//div[@class='css-1dbjc4n r-1awozwy r-19m6qjp r-156aje7 r-y47klf r-1phboty r-1d6rzhh r-1pi2tsx r-1777fci r-13qz1uu']")).click();   ////focused date
+						System.out.println("after1");
+		*/				
+	/*	lb.driver.findElement(By.xpath("//*[contains(text(),'1 Adult')]")).click();
+		
+		Thread.sleep(2000);
+	//	lb.driver.findElement(By.xpath("//div[@class='r-1awozwy r-19m6qjp r-y47klf r-1loqt21 r-eu3ka r-1777fci r-1otgn73 r-1i6wzkk r-lrvibr r-1aockid css-1dbjc4n']")).click();
+		for (int i=0;i<1;i++)
+		{
+			
+			System.out.println(i);
+		//	Thread.sleep(3000);
+		lb.driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div[3]/div[2]/div[5]/div[1]/div/div[2]/div[2]/div/div[1]/div[1]/div[2]/div[3]")).click();
+		System.out.println("out");
+		
+		}
+		
+		
+		
+		for (int i=0;i<1;i++)
+		{
+			
+			System.out.println(i);
+		//	Thread.sleep(3000);
+		lb.driver.findElement(By.xpath("//*[@id=\"main-container\"]/div/div[1]/div[3]/div[2]/div[5]/div[1]/div/div[2]/div[2]/div/div[1]/div[2]/div[2]/div[3]")).click();
+		System.out.println("out");
+		
+		
+	
+	
+		}
+*/		
+		lb.driver.findElement(By.xpath("(//div[@class='css-76zvg2 css-bfa6kz r-homxoj r-ubezar'])[4]")).click();
+		Thread.sleep(3000);
+		lb.driver.findElement(By.xpath("//div[@class='css-1dbjc4n r-150rngu r-eqz5dr r-16y2uox r-1wbh5a2 r-11yh6sk r-1rnoaur r-1sncvnh'] //*[contains(text(),'INR')]")).click();
+		
+		lb.driver.findElement(By.xpath("(//div[@class='css-76zvg2 r-cqee49 r-n6v787 r-1ozqkpa'])[1]")).click();
+		lb.driver.findElement(By.xpath("(//div[@class='css-1dbjc4n r-1awozwy r-z2wwpe r-1loqt21 r-18u37iz r-1777fci r-1g94qm0 r-1w50u8q r-ah5dr5 r-1otgn73'])")).click();
+		
+	}
+
+}

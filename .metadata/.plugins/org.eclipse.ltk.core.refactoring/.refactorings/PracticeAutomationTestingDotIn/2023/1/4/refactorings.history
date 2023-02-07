@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;PracticeAutomationTestingDotIn/src/test/resources/appFeatures/test.feature&apos; to &apos;Basket.feature&apos;" description="Rename resource &apos;test.feature&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/test/resources/appFeatures/test.feature" name="Basket.feature" stamp="1674745856518" updateReferences="true"/>
+</session>

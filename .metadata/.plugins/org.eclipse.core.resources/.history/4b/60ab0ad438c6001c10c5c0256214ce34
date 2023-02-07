@@ -1,0 +1,13 @@
+
+public class ChildWindow {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		LaunchBrowser lb =new LaunchBrowser();
+		lb.browserLaunch();
+		lb.driver.get("https://www.businessinsider.in/thelife/how-to-split-the-screen-on-a-windows-10-computer-for-all-of-your-multitasking-needs/articleshow/70370880.cms");
+
+	}
+
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MyTestRunner (1)" project="PracticeAutomationTestingDotIn" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="testRunner.MyTestRunner" incomplete="true">
+    <testsuite name="verify in Checkout page the user provides bellings details via excelfile and verifies the order details and makes the payment to place order." incomplete="true">
+      <testcase name="verify your order details" classname="verify in Checkout page the user provides bellings details via excelfile and verifies the order details and makes the payment to place order." time="26.369"/>
+      <testcase name="Update the Billing details" classname="verify in Checkout page the user provides bellings details via excelfile and verifies the order details and makes the payment to place order." incomplete="true"/>
+    </testsuite>
+  </testsuite>
+</testrun>

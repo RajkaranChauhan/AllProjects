@@ -1,0 +1,43 @@
+package com.qa.util;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+
+import io.cucumber.shaded.messages.types.Scenario;
+
+
+
+
+
+public class ScreenShots {
+	WebDriver driver;
+	Scenario scenario= new Scenario();
+	
+	public void getScreenshots(String name, WebDriver driver)
+	{
+		//Scenario scenario;
+		System.out.println("Scenario failed taking SS");
+		String destinationPath= System.getProperty("user.dir")+"\\src\\test\\resources\\report\\screenshots\\"+name+".png";
+		
+		TakesScreenshot ts=  (TakesScreenshot)driver;
+	//	File source=ts.getScreenshotAs(OutputType.FILE);
+		byte[] source=ts.getScreenshotAs(OutputType.BYTES);
+		try {
+	//		FileUtils.copyFile(source, new File(destinationPath));
+			scenario.attach(source, "image/png", destinationPath);
+	//		scenario.
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	//	byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+	//	scenario.attach(sourcePath, "image/png", screenshotName);
+	}
+
+}

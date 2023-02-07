@@ -1,0 +1,80 @@
+package parellel;
+
+import org.junit.Assert;
+
+import com.qa.driverFactory.DriverFactory;
+import com.qa.util.ConfigReader;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pages.IndexPage;
+import pages.MyAccountPage;
+
+public class MyAccountPageSteps {
+	
+	IndexPage indexPage= new IndexPage(DriverFactory.getDriver());
+	MyAccountPage myAccountPage;
+	
+	ConfigReader  configReader;
+
+	@Given("From index page the user is navigated to the MyAccount page")
+	public void from_index_page_the_user_is_navigated_to_the_my_account_page() {
+		configReader =new ConfigReader();
+		String URL=configReader.init_prop().getProperty("url");
+	   DriverFactory.getDriver().get(URL);
+	   myAccountPage= indexPage.MyAccountPageNavigation();
+	   
+	}
+
+	@Given("user gets the title of MyAccount page")
+	public void user_gets_the_title_of_my_account_page() {
+		System.out.println("The title of my account page is : "+myAccountPage.getPageTitle());
+	}
+
+	@Then("verify the title of the MyAccount is {string}")
+	public void verify_the_title_of_the_my_account_is(String expectedPageTitle) {
+		String actualPageTitle =myAccountPage.getPageTitle();
+	    Assert.assertTrue(actualPageTitle.contains(expectedPageTitle));
+	}
+
+	@Given("user is on login page")
+	public void user_is_on_login_page() {
+	
+		System.out.println("The title of my account page is : "+myAccountPage.getPageTitle());
+	}
+
+	@Then("forgot your password link should be displayed")
+	public void forgot_your_password_link_should_be_displayed() {
+		
+		Assert.assertTrue(myAccountPage.lostYourPasswordLinkExists());
+	}
+
+	@When("user enters username {string}")
+	public void user_enters_username(String user) {
+		myAccountPage.enterUserName(user);
+	}
+
+	@When("user enters password {string}")
+	public void user_enters_password(String pwd) {
+		myAccountPage.enterPassword(pwd);
+	}
+
+	@When("user clicks on Login button")
+	public void user_clicks_on_login_button() {
+		myAccountPage.clickLoginButton();
+	}
+
+	@Then("user gets the title of the Homepage")
+	public void user_gets_the_title_of_the_homepage() {
+		System.out.println("The title of Home page is : "+myAccountPage.getPageTitle());
+	}
+
+	@Then("Home page title should be {string}")
+	public void home_page_title_should_be(String expectedPageTitle) {
+		String actualPageTitle =myAccountPage.getPageTitle();
+	    Assert.assertTrue(actualPageTitle.contains(expectedPageTitle));
+	}
+
+	
+}

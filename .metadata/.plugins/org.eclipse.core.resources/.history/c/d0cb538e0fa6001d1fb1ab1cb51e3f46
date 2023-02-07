@@ -1,0 +1,22 @@
+Feature: Verify in the Basket page the user sees the books and there quantity added. Here user will remove one of the book and update the basket. The usre will Proceed to checkout.
+
+
+ Background: 
+  	 Given From index page the user is navigated to the MyAccount page.
+  	 Then In My Account page user logged into the applicaton using credentials user name "don.piet2008@gmail.com" and password "Raj12345!" and lands in Home Page
+  	 Then From Home page user is navigated  to the Shop page
+  	 Then From the Shop the user will be navigated to the basket page
+  	 
+ Scenario: Verify the title of the page
+   Given user gets the title of basket page
+   Then verify the title of the basket page is "Basket – Automation Practice Site" 	
+    
+Scenario: User removed one book from the Basket page and update the Basket page and then navigates to the checkout.
+Given user gets the title of basket page
+Then verify there is one Products in the basket  #two
+ #|HTML5 WebApp Develpment|
+ |Mastering JavaScript|
+Then user removes  quantity of the product "Mastering JavaScript" by "1"
+Then user updates the baskets
+Then user proceeds to checkout by clicking  the button
+Then verify the title of the checkout page is "Checkout – Automation Practice Site"

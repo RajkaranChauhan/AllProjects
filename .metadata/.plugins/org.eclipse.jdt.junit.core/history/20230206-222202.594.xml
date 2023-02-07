@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MyTestRunner (1)" project="PracticeAutomationTestingDotIn" tests="15" started="15" failures="0" errors="0" ignored="0">
+  <testsuite name="testRunner.MyTestRunner" time="227.086">
+    <testsuite name="Verify user is able to browse to the give URL and is on the index page. After verifying the content of the index page user is able to navigate to the My Account page." time="33.593">
+      <testcase name="User is on the index page and page title is verified" classname="Verify user is able to browse to the give URL and is on the index page. After verifying the content of the index page user is able to navigate to the My Account page." time="12.685"/>
+      <testcase name="User is on the index page and logo is verified" classname="Verify user is able to browse to the give URL and is on the index page. After verifying the content of the index page user is able to navigate to the My Account page." time="9.686"/>
+      <testcase name="User navigates to the MyAccount Page" classname="Verify user is able to browse to the give URL and is on the index page. After verifying the content of the index page user is able to navigate to the My Account page." time="11.222"/>
+    </testsuite>
+    <testsuite name="once the user is in the Myaccount page the user can login using the correct credentials and the user will be moved to home page" time="33.92">
+      <testcase name="Verify the title of the page" classname="once the user is in the Myaccount page the user can login using the correct credentials and the user will be moved to home page" time="11.362"/>
+      <testcase name="Forgot Password link" classname="once the user is in the Myaccount page the user can login using the correct credentials and the user will be moved to home page" time="10.627"/>
+      <testcase name="Login with correct credentials" classname="once the user is in the Myaccount page the user can login using the correct credentials and the user will be moved to home page" time="11.931"/>
+    </testsuite>
+    <testsuite name="verify in Home page the content. The tabs in left hand side to be verified. After that user will be moved to the Shop page." time="37.054">
+      <testcase name="Verify the title of the page" classname="verify in Home page the content. The tabs in left hand side to be verified. After that user will be moved to the Shop page." time="11.573"/>
+      <testcase name="Home Page section count" classname="verify in Home page the content. The tabs in left hand side to be verified. After that user will be moved to the Shop page." time="12.071"/>
+      <testcase name="User navigates to the Shop page" classname="verify in Home page the content. The tabs in left hand side to be verified. After that user will be moved to the Shop page." time="13.41"/>
+    </testsuite>
+    <testsuite name="Verify from the Shop page user is able to add a book to the basket and navigate to the basket page" time="38.01">
+      <testcase name="Verify the title of the page" classname="Verify from the Shop page user is able to add a book to the basket and navigate to the basket page" time="15.227"/>
+      <testcase name="Search the required book and add the book to basket" classname="Verify from the Shop page user is able to add a book to the basket and navigate to the basket page" time="22.78"/>
+    </testsuite>
+    <testsuite name="Verify in the Basket page the user sees the books and there quantity added. Here user will remove one of the book and update the basket. The usre will Proceed to checkout." time="41.317">
+      <testcase name="Verify the title of the page" classname="Verify in the Basket page the user sees the books and there quantity added. Here user will remove one of the book and update the basket. The usre will Proceed to checkout." time="17.564"/>
+      <testcase name="User removed one book from the Basket page and update the Basket page and then navigates to the checkout." classname="Verify in the Basket page the user sees the books and there quantity added. Here user will remove one of the book and update the basket. The usre will Proceed to checkout." time="23.753"/>
+    </testsuite>
+    <testsuite name="verify in Checkout page the user provides bellings details via excelfile and verifies the order details and makes the payment to place order." time="43.172">
+      <testcase name="verify your order details" classname="verify in Checkout page the user provides bellings details via excelfile and verifies the order details and makes the payment to place order." time="16.881"/>
+      <testcase name="Update the Billing details" classname="verify in Checkout page the user provides bellings details via excelfile and verifies the order details and makes the payment to place order." time="26.291"/>
+    </testsuite>
+  </testsuite>
+</testrun>

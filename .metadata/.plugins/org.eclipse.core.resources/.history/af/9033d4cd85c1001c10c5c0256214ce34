@@ -1,0 +1,15 @@
+
+public class LoginPagePractise {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		LaunchBrowser lb =new LaunchBrowser();
+		
+	lb.browserLaunch();
+	lb.driver.get("https://rahulshettyacademy.com/loginpagePractise/");
+		
+
+	}
+
+}

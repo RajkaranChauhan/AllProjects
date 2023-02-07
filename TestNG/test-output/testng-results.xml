@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-02T02:56:57 IST" name="Suite" finished-at="2022-07-02T02:56:57 IST" duration-ms="87">
+    <groups>
+      <group name="smoke">
+        <method signature="Test1.test02()[pri:0, instance:TestNGPractice.Test1@15bbf42f]" name="test02" class="TestNGPractice.Test1"/>
+        <method signature="Test3.test01()[pri:0, instance:TestNGPractice.Test3@31e5415e]" name="test01" class="TestNGPractice.Test3"/>
+        <method signature="Test3.test04()[pri:0, instance:TestNGPractice.Test3@31e5415e]" name="test04" class="TestNGPractice.Test3"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2022-07-02T02:56:57 IST" name="Test" finished-at="2022-07-02T02:56:57 IST" duration-ms="87">
+      <class name="TestNGPractice.Test3">
+        <test-method is-config="true" signature="getURL()[pri:0, instance:TestNGPractice.Test3@31e5415e]" started-at="2022-07-02T02:56:57 IST" name="getURL" finished-at="2022-07-02T02:56:57 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getURL -->
+        <test-method signature="Demo01()[pri:0, instance:TestNGPractice.Test3@31e5415e]" started-at="2022-07-02T02:56:57 IST" name="Demo01" finished-at="2022-07-02T02:56:57 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Demo01 -->
+        <test-method signature="test01()[pri:0, instance:TestNGPractice.Test3@31e5415e]" started-at="2022-07-02T02:56:57 IST" name="test01" finished-at="2022-07-02T02:56:57 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test01 -->
+        <test-method signature="test02()[pri:0, instance:TestNGPractice.Test3@31e5415e]" started-at="2022-07-02T02:56:57 IST" name="test02" finished-at="2022-07-02T02:56:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test02 -->
+        <test-method signature="test03()[pri:0, instance:TestNGPractice.Test3@31e5415e]" started-at="2022-07-02T02:56:57 IST" name="test03" finished-at="2022-07-02T02:56:57 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test03 -->
+        <test-method signature="test04()[pri:0, instance:TestNGPractice.Test3@31e5415e]" started-at="2022-07-02T02:56:57 IST" name="test04" finished-at="2022-07-02T02:56:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test04 -->
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:TestNGPractice.Test3@31e5415e]" started-at="2022-07-02T02:56:57 IST" name="browserClose" finished-at="2022-07-02T02:56:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClose -->
+      </class> <!-- TestNGPractice.Test3 -->
+      <class name="TestNGPractice.Test2">
+        <test-method is-config="true" signature="getURL()[pri:0, instance:TestNGPractice.Test2@49912c99]" started-at="2022-07-02T02:56:57 IST" name="getURL" finished-at="2022-07-02T02:56:57 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getURL -->
+        <test-method signature="test01()[pri:0, instance:TestNGPractice.Test2@49912c99]" started-at="2022-07-02T02:56:57 IST" name="test01" finished-at="2022-07-02T02:56:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test01 -->
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:TestNGPractice.Test2@49912c99]" started-at="2022-07-02T02:56:57 IST" name="browserClose" finished-at="2022-07-02T02:56:57 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClose -->
+      </class> <!-- TestNGPractice.Test2 -->
+      <class name="TestNGPractice.Test1">
+        <test-method is-config="true" signature="getURL()[pri:0, instance:TestNGPractice.Test1@15bbf42f]" started-at="2022-07-02T02:56:57 IST" name="getURL" finished-at="2022-07-02T02:56:57 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getURL -->
+        <test-method signature="test01()[pri:0, instance:TestNGPractice.Test1@15bbf42f]" started-at="2022-07-02T02:56:57 IST" name="test01" finished-at="2022-07-02T02:56:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test01 -->
+        <test-method signature="test02()[pri:0, instance:TestNGPractice.Test1@15bbf42f]" started-at="2022-07-02T02:56:57 IST" name="test02" finished-at="2022-07-02T02:56:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test02 -->
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:TestNGPractice.Test1@15bbf42f]" started-at="2022-07-02T02:56:57 IST" name="browserClose" finished-at="2022-07-02T02:56:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClose -->
+      </class> <!-- TestNGPractice.Test1 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,0 +1,29 @@
+package com.mystore.actionClass;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class TestClass 
+{
+	public WebDriver driver;
+	ActionClass action =new ActionClass();
+	
+	@Test
+	public void getTest()
+	{
+		String driverPath= System.getProperty("user.dir")+"\\Webdriver\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver",driverPath);
+		driver=new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		action.implicitlWait( driver,10);
+		action.pageLoadTimeOut(driver,30);
+		driver.get("http://automationpractice.com/index.php");
+		
+		System.out.println(driver.findElement(By.cssSelector("img[class='logo img-responsive']")).isDisplayed());
+		//driver.findElement(By.cssSelector("img[class='logo img-responsive']")).isDisplayed();
+	}
+
+}

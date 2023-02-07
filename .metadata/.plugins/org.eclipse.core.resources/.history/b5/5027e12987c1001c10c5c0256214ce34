@@ -1,0 +1,49 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+public class LoginPagePractise {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+		LaunchBrowser lb =new LaunchBrowser();
+		
+	lb.browserLaunch();
+	lb.driver.manage().window().maximize();
+	lb.driver.get("https://rahulshettyacademy.com/loginpagePractise/");
+	System.out.println("page loaded");
+	Thread.sleep(3000);
+	//lb.driver.findElement(By.xpath("//button[@id=\"okayBtn\"]")).click();
+	
+	//lb.driver.switchTo().alert().accept();
+
+	lb.driver.findElement(By.xpath("//Input[@id='username']")).sendKeys("rahulshettyacademy");
+	   /////  rahulshettyacademy 
+	lb.driver.findElement(By.xpath("//Input[@id='password']")).sendKeys("learning");
+	//Input[@id='password']    /////    learning
+	lb.driver.findElement(By.xpath("(//input[@id=\"usertype\"])[2]")).click();
+	
+//	(//input[@id="usertype"])[2]
+			
+	 WebElement statciDropdown = lb.driver.findElement(By.xpath("//select[@class=\"form-control\"]"));
+	 
+	 
+	
+	
+			
+			//select[@class="form-control"]
+			
+			//input[@id="terms"]
+			
+			//input[@id="signInBtn"]
+			
+			
+			//a[@class="list-group-item"]
+			
+			
+			
+	
+
+	}
+
+}

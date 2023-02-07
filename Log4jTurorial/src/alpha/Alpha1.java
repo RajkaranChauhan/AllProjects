@@ -1,0 +1,14 @@
+package alpha;
+
+
+
+public class Alpha1 {
+
+	
+	LogManager.getLogger(Alpha1.class.getNmae());
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

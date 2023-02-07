@@ -1,0 +1,94 @@
+package stepDefinations;
+
+import java.util.List;
+
+import org.junit.Assert;
+
+import com.qa.driverFactory.DriverFactory;
+
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import pages.BasketPage;
+import pages.ShopPage;
+
+public class BasketPageSteps {
+	
+	private BasketPage basketPage;
+	
+	ShopPage shopPage= new ShopPage(DriverFactory.getDriver());
+	
+	@Then("From the Shop the user will be navigated to the basket page")
+	public void from_the_shop_the_user_will_be_navigated_to_the_basket_page() {
+		basketPage= 	shopPage.NavigateToBasket();
+	}
+
+	@Given("user gets the title of basket page")
+	public void user_gets_the_title_of_basket_page() {
+	   System.out.println(" The title of the Basket page is: "+basketPage.getPageTitle());
+	}
+
+	@Then("verify the title of the basket page is {string}")
+	public void verify_the_title_of_the_basket_page_is(String expectedTitleOfThePage) {
+		String actualTitleOfThePage=basketPage.getPageTitle();
+		Assert.assertTrue(expectedTitleOfThePage.contains(actualTitleOfThePage));
+	}
+/*
+	@Then("verify there is two Products {string} and {string} in the basket")
+	public void verify_there_is_two_products_and_in_the_basket(String productOne, String productTwo) {
+		List<String> products = basketPage.getProductsList();
+		
+		if (products.contains(productOne))
+		{
+			System.out.println("the one product available in basket is:" +productOne );
+		}
+		else
+		{
+			System.out.println("The product is not available in the Basket");
+		}
+		
+	}
+*/
+	
+	@Then("verify there is two Products in the basket")
+	public void verify_there_is_two_products_in_the_basket(DataTable expectedProductList) {
+		List<String> expectedProduct=expectedProductList.asList();
+		List<String> products = basketPage.getProductsList();
+		System.out.println("The actual product in basket:"+products);
+		System.out.println("The expected product in basket:"+expectedProductList);
+		Assert.assertTrue(expectedProduct.containsAll(products));
+	}
+	
+	/*@Then("user removes quantity of the product {string} by {string}")
+	public void user_removes_quantity_of_the_product_by(String bookName,String numb) {
+		basketPage.getremoveQuantityFromProductList();
+	}*/
+	
+	@Then("user removes  quantity of the product {string} by {string}")
+	public void user_removes_quantity_of_the_product_by(String bookName, String numb) throws InterruptedException {
+		//int num=numb;
+		basketPage.getremoveQuantityFromProductList(bookName,numb);
+		Thread.sleep(5000);
+	}
+
+	@Then("user updates the baskets")
+	public void user_updates_the_baskets() {
+		basketPage.getUpdateBasketButton();
+	}
+
+	@Then("user proceeds to checkout by clicking  the button")
+	public void user_proceeds_to_checkout_by_clicking_the_button() throws InterruptedException {
+		Thread.sleep(1500);
+		basketPage.getProceedToCheckoutButton();
+		System.out.println("page title:"+basketPage.getPageTitle());
+		
+	}
+
+	@Then("verify the title of the checkout page is {string}")
+	public void verify_the_title_of_the_checkout_page_is(String expectedTitleOfThePage) {
+		String actualTitleOfThePage=basketPage.getPageTitle();
+		System.out.println(actualTitleOfThePage +" ::is actual and this is expected:: "+expectedTitleOfThePage);
+		Assert.assertTrue(expectedTitleOfThePage.contains(actualTitleOfThePage));
+		
+	}
+}

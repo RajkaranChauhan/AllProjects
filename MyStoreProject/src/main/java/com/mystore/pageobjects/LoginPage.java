@@ -1,0 +1,56 @@
+package com.mystore.pageobjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.mystore.actionClass.ActionClass;
+import com.mystore.base.BaseClass;
+
+public class LoginPage //extends BaseClass 
+{
+	ActionClass action =new ActionClass();
+	WebDriver driver;
+	
+	
+	public  LoginPage (WebDriver driver)
+	{	driver=this.driver;
+		PageFactory.initElements(driver, this);
+	}	
+	
+	@FindBy(id="email") 	WebElement signInEmail;
+	@FindBy(id="passwd")	WebElement signInPassword;
+	@FindBy(id="SubmitLogin")	WebElement signInBUtton;
+	@FindBy(id="email_create")	WebElement registerEmail;
+	@FindBy(id="SubmitCreate")	WebElement createAccountButton;
+
+	
+	public HomePage login(String userName,String password)
+	{
+	
+		ActionClass.PageLoadTillElementVisiable(driver, signInBUtton);
+		action.type(signInEmail, userName);
+		action.type(signInPassword, password);
+		action.click(driver, signInBUtton);
+		return new HomePage();
+	}
+	public AddressPage loginOfCheckout(String userName,String password)
+	{
+		action.type(signInEmail, userName);
+		action.type(signInPassword, password);
+		action.click(driver, signInBUtton);
+		return new AddressPage();
+	}
+	
+	public AccountCreationPage createNewAccount(String email)
+	{
+		action.type(registerEmail, email);
+		action.click(driver, createAccountButton);
+		
+		return new AccountCreationPage();
+	}
+	
+	
+	
+}

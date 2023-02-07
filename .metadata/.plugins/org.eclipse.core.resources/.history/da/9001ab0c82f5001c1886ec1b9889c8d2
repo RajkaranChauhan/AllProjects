@@ -1,0 +1,66 @@
+package Resources;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import End2End.DriverDefine;
+import PageObject.PomHomePage;
+
+public class DataProperties {
+	public String browser;
+	public WebDriver driver;
+	protected String URLhomePage;
+	protected Properties prop;
+	
+	@Test
+	public  void dataPropertyFile() throws IOException
+	{
+	
+	 prop =new Properties();
+	String path=System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\data.properties";
+	FileInputStream fis=new FileInputStream(path);
+	
+	prop.load(fis);
+	//System.out.println("after dataPropertyFile");
+	// browser=prop.getProperty("browser");
+	//DriverDefine dr=new DriverDefine();
+//	driver=dr.setDriver();
+	// URLhomePage=prop.getProperty("URL");
+	//System.out.println(URL);
+	}
+	
+	
+	public String getAutomationBrowser()
+	{
+		 browser=prop.getProperty("browser");
+		//String browser="new";
+		System.out.println(browser);
+		return browser;
+	}
+	
+	public String getURL()
+	{
+		URLhomePage=prop.getProperty("URL");
+		System.out.println(URLhomePage);
+		return URLhomePage;
+	}
+	
+	@Test//(dependsOnMethods= {"dataPropertyFile"})
+	public void getDriver()
+	{System.out.println("getDriver");
+		DriverDefine dr=new DriverDefine();
+		System.out.println("1");
+		driver=dr.setDriver();
+		System.out.println("2");
+		driver.get(getURL());
+		//return driver;
+	}
+	
+	
+	
+}

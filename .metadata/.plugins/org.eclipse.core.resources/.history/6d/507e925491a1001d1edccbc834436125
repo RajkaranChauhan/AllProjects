@@ -1,0 +1,101 @@
+package parellel;
+
+import java.util.List;
+
+import org.junit.Assert;
+
+import com.qa.driverFactory.DriverFactory;
+import com.qa.util.ConfigReader;
+
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import pages.HomePage;
+import pages.IndexPage;
+import pages.MyAccountPage;
+import pages.ShopPage;
+
+public class HomePageSteps {
+	IndexPage indexPage= new IndexPage(DriverFactory.getDriver());
+	MyAccountPage myAccountPage;
+	HomePage homePage;
+	ShopPage shopPage;
+	
+	ConfigReader  configReader;
+
+	@Given("From index page the user is navigated to the MyAccount page.")
+	public void from_index_page_the_user_is_navigated_to_the_my_account_page() {
+		  configReader = new ConfigReader();
+		  String URL=configReader.init_prop().getProperty("url");
+		  DriverFactory.getDriver().get(URL);
+		  System.out.println(" url navigated");
+		  myAccountPage=  indexPage.MyAccountPageNavigation();
+		  System.out.println(" A");
+		 // System.out.println("homepageStepdef"+DriverFactory.getDriver());
+	}
+
+	@Then("In My Account page user logged into the applicaton using credentials user name {string} and password {string} and lands in Home Page")
+	public void in_my_account_page_user_logged_into_the_applicaton_using_credentials_user_name_and_password_and_lands_in_home_page(String user, String pass) {
+		 System.out.println(" AA");
+		homePage=	myAccountPage.HomePageNavigation(user, pass);
+		 System.out.println(" AAA");
+	}
+
+	@Given("user gets the title of Home page")
+	public void user_gets_the_title_of_home_page() {
+		System.out.println(homePage.getTitle());
+	}
+
+	@Then("verify the title of the Home page is {string}")
+	public void verify_the_title_of_the_home_page_is(String ExpectedTitleOfPage) {
+		System.out.println("The actual title of home page is verified and is: "+homePage.getTitle());
+		System.out.println("The expected title of home page is verified and is: "+ExpectedTitleOfPage);
+	  Assert.assertTrue(homePage.getTitle().contains(ExpectedTitleOfPage));
+	  System.out.println("The title of home page is verified and is: "+homePage.getTitle());
+	}
+
+	@Given("user is on Home page")
+	public void user_is_on_home_page() {
+		System.out.println(homePage.getTitle());
+	}
+
+	@Then("user gets accounts section")
+	public void user_gets_accounts_section(DataTable expectedtableDataofLeftSection) {
+	   
+		List<String> expectedtableData = expectedtableDataofLeftSection.asList();
+		List<String> actualtableData = homePage.getDataofLeftSection();
+		///Assert.assertTrue(actualtableData.contains(expectedtableDataofLeftSection));
+		Assert.assertTrue(actualtableData.containsAll(expectedtableData));
+	}
+
+	@Then("accounts section count should be {int}")
+	public void accounts_section_count_should_be(Integer expectedDataofLeftSectionCount) {
+		
+		System.out.println("the actual count of the leftsection data is :" + homePage.getDataofLeftSectionCount());
+		Assert.assertTrue(homePage.getDataofLeftSectionCount()==expectedDataofLeftSectionCount);
+	}
+
+	@Then("user clicks on the Shop link and navigates to the Shop Page")
+	public void user_clicks_on_the_shop_link_and_navigates_to_the_shop_page() {
+		homePage.ClickOnShopLink();
+	//	shopPage=	homePage.shopPageNavigation();
+		
+	}
+	
+	@Then("verify the title of the Shoppage is {string}")
+	public void verify_the_title_of_the_Shoppage_is(String ExpectedTitleOfPage) {
+		System.out.println("The actual title of Shop page is verified and is: "+homePage.getTitle());
+		System.out.println("The expected title of Shop page is verified and is: "+ExpectedTitleOfPage);
+	  Assert.assertTrue(homePage.getTitle().contains(ExpectedTitleOfPage));
+	  System.out.println("The title of home page is verified and is: "+homePage.getTitle());
+	}
+
+	@Then("verify there is a secion called as {string}")
+	public void verify_there_is_a_secion_called_as(String expectedData) {
+		System.out.println("The actual string of the shope page is :"+homePage.getProductCategory());
+		System.out.println("The expected string of the shope page is :"+expectedData);
+		Assert.assertTrue(homePage.getProductCategory().contains(expectedData));
+		
+	}
+	
+}

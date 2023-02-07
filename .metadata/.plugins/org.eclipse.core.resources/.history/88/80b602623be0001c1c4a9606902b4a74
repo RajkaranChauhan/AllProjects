@@ -1,0 +1,19 @@
+import org.openqa.selenium.By;
+
+import io.opentelemetry.exporter.logging.SystemOutLogExporter;
+
+public class NestedFrames {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		LaunchBrowser lb =new LaunchBrowser();
+		lb.browserLaunch();
+		lb.driver.manage().window().maximize();
+		lb.driver.get("https://the-internet.herokuapp.com/nested_frames");
+		
+	System.out.println(lb.driver.findElements(By.tagName("frame")).size());		
+
+	}
+
+}

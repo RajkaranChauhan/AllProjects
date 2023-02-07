@@ -1,0 +1,26 @@
+
+Feature: Verify from the Shop page user is able to add a book to the basket and navigate to the basket page
+
+
+ Background: 
+  	 Given From index page the user is navigated to the MyAccount page.
+  	 Then In My Account page user logged into the applicaton using credentials user name "don.piet2008@gmail.com" and password "Raj12345!" and lands in Home Page
+  	 Then From Home page user is navigated  to the Shop page
+  #	 Then user clicks on the Shop link and navigates to the Shop Page
+  	 
+
+Scenario: Verify the title of the page
+    Given user gets the title of Shop page
+    Then verify the title of the Shop page is "Products – Automation Practice Site"
+    Then verify there is a element called as "PRODUCT CATEGORIES"
+
+Scenario: Search the required book and add the book to basket
+Given user is on Shop page
+Then user adds three books in basket by clicking on button AddtoBasket
+#|HTML5 WebApp Develpment|
+|Mastering JavaScript|
+|Mastering JavaScript|
+And  verify the content of the shopping cart has "3 Items"
+And user navigates to the Basketpage by clicking on the cart icon
+And verify the title of the Basket page is "Basket – Automation Practice Site"
+

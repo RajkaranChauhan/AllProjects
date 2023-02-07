@@ -1,0 +1,8 @@
+22:47:09.576 [main] DEBUG Alpha.DemoLog4j - i am debuggging
+22:47:09.579 [main] INFO  Alpha.DemoLog4j - object is present
+22:47:09.579 [main] ERROR Alpha.DemoLog4j - object is not present
+22:47:09.579 [main] FATAL Alpha.DemoLog4j - this is fatal
+22:47:50.991 [main] DEBUG Alpha.DemoLog4j - i am debuggging
+22:47:50.994 [main] INFO  Alpha.DemoLog4j - object is present
+22:47:50.994 [main] ERROR Alpha.DemoLog4j - object is not present
+22:47:50.994 [main] FATAL Alpha.DemoLog4j - this is fatal

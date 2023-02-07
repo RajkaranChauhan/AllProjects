@@ -1,0 +1,59 @@
+package pages;
+
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.qa.util.BrowserActions;
+
+public class CheckoutPage {
+	
+private WebDriver driver;
+BrowserActions  browserActions= new BrowserActions();
+	
+	public  CheckoutPage(WebDriver driver)
+	{
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+		System.out.println("checkout page const"+driver);
+	}
+	
+	@FindBy(css ="input#billing_first_name" )
+	 List<WebElement> firstName;
+	
+	@FindBy(css ="input#billing_last_name" )
+	 List<WebElement> lastName;
+	
+	@FindBy(css ="input#billing_company" )
+	 List<WebElement> companyNmae;
+	@FindBy(css ="input#billing_email" )
+	 List<WebElement> emailAddress;
+	@FindBy(css ="input#billing_phone" )
+	 List<WebElement> phone;
+	@FindBy(css ="input#billing_address_1" )
+	 List<WebElement> billingAddress_1;
+	@FindBy(css ="input#billing_city" )
+	 List<WebElement> city;
+	@FindBy(css ="input#billing_postcode" )
+	 List<WebElement> postcode;
+	@FindBy(css ="p#billing_country_field  span.select2-arrow")
+	 List<WebElement> dropdownCountry;
+	@FindBy(css ="span.select2-match")
+	 List<WebElement> dropdownCountryList;
+	@FindBy(css ="div#s2id_billing_state span.select2-arrow")
+	 List<WebElement> dropdownState;
+	@FindBy(css ="span.select2-match")
+	 List<WebElement> dropdownStateList;
+	@FindBy(css ="textarea.input-text")
+	 List<WebElement> orderNotes;
+	@FindBy(css ="input#payment_method_cod")
+	 List<WebElement> cashOnDelivery;
+	@FindBy(css ="input#place_order")
+	 List<WebElement> placeOrder;
+	@FindBy(xpath ="//*[text()='Thank you. Your order has been received.']")
+	 List<WebElement> orderConfirmationText;
+
+}
