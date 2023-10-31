@@ -1,0 +1,115 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": -38.38,
+        "lng": 33.42
+    },
+    "accuracy": 50,
+    "name": "ShreeramGreens",
+    "phone_number": "(+91)1234567890",
+    "address": "Dhanori",
+    "types": [
+        "shoe park",
+        "shop"
+    ],
+    "website": "www.google.com",
+    "language": "Bihari"
+}
+HTTP/1.1 200 OK
+Date: Wed, 04 Oct 2023 17:50:24 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "471a2a3f247cba44a02833171091c450",
+    "scope": "APP",
+    "reference": "4198a44f8639748fe6f49eb83ed250744198a44f8639748fe6f49eb83ed25074",
+    "id": "4198a44f8639748fe6f49eb83ed25074"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=471a2a3f247cba44a02833171091c450
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=471a2a3f247cba44a02833171091c450
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Wed, 04 Oct 2023 17:50:25 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 219
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-38.38",
+        "longitude": "33.42"
+    },
+    "accuracy": "50",
+    "name": "ShreeramGreens",
+    "phone_number": "(+91)1234567890",
+    "address": "Dhanori",
+    "types": "shoe park,shop",
+    "website": "www.google.com",
+    "language": "Bihari"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "place_id": "471a2a3f247cba44a02833171091c450"
+}
+HTTP/1.1 200 OK
+Date: Wed, 04 Oct 2023 17:50:26 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 15
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK"
+}
