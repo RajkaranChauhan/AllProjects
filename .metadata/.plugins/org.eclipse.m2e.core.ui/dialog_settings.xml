@@ -2,12 +2,15 @@
 <section name="Workbench">
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="API"/>
 			<item value="Raj-Automation"/>
 			<item value="Automation"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="APIDemo"/>
+			<item value="API_Demo"/>
 			<item value="Selenium-java"/>
 			<item value="Selenium"/>
 		</list>
@@ -52,13 +55,18 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="API_Testing.ApiDemo"/>
+			<item value="API_Testing.DemoApi"/>
 			<item value="PracticeAutomationTestingDotInn"/>
 			<item value="PracticeAutomationTestingDotIn"/>
 		</list>
 		<list key="groupId">
+			<item value="API_Testing "/>
 			<item value="PracticeAutomationTesting.in"/>
 		</list>
 		<list key="artifactId">
+			<item value="ApiDemo"/>
+			<item value="DemoApi"/>
 			<item value="PracticeAutomationTestingDotIn"/>
 		</list>
 		<list key="projectNameTemplate">

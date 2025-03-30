@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="MyTestRunner (1)" project="PracticeAutomationTestingDotIn" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="testRunner.MyTestRunner" time="43.297">
-    <testsuite name="verify in Checkout page the user provides bellings details via excelfile and verifies the order details and makes the payment to place order." time="43.297">
-      <testcase name="verify your order details" classname="verify in Checkout page the user provides bellings details via excelfile and verifies the order details and makes the payment to place order." time="18.146"/>
-      <testcase name="Update the Billing details" classname="verify in Checkout page the user provides bellings details via excelfile and verifies the order details and makes the payment to place order." time="25.151"/>
-    </testsuite>
-  </testsuite>
-</testrun>
